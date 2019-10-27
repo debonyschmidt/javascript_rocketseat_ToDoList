@@ -25,22 +25,48 @@ function renderTodos() {
 
     var pos = todos.indexOf(todo);
 
+    var actions = document.createElement('div');
+
+
     var deleteElement = document.createElement('i');
-    deleteElement.setAttribute("class","far fa-trash-alt");
+    deleteElement.setAttribute("class","far fa-trash-alt delete");
     deleteElement.setAttribute("aria-hidden","true");
     deleteElement.setAttribute('onclick', 'deleteTodo('+ pos +')');
 
+    var editElement = document.createElement('i');
+    editElement.setAttribute("class", "far fa-edit")
+    editElement.setAttribute("aria-hidden","true");
+    editElement.setAttribute('onclick', 'editTodo('+ pos +')');
+
     // linkElement.appendChild(deleteElement);
     todoElement.appendChild(todoText);
-    todoElement.appendChild(deleteElement);
+    todoElement.appendChild(actions);
+    actions.appendChild(editElement);
+    actions.appendChild(deleteElement);
     listElement.appendChild(todoElement);
   }
 }
 
 renderTodos();
 
+var button = document.getElementById("button");
+var todoText = document.getElementById("text");
+var task = "new";
+var posEdit = "";
+
+button.addEventListener("click", function() {
+  if (task === "existent") {
+    replaceTodo()
+  } else if (todoText.value === "") {  
+    alert ("Please, enter a new task")
+  } else {
+    addTodo();
+  }
+});
+
+
 function addTodo() {
-  var todoText = inputElement.value;
+  var todoText = document.getElementById("text").value;
 
   todos.push(todoText);
   inputElement.value = '';
@@ -48,7 +74,26 @@ function addTodo() {
   saveToStorage();
 }
 
-buttonElement.onclick = addTodo;
+
+function editTodo(pos) {
+  var todoText = document.getElementById("text");
+  todoText.value = todos[pos];
+  button.textContent = "Save"; 
+  task = "existent";
+  posEdit = pos;
+}
+
+function replaceTodo(){
+  var startIndex = posEdit;
+    var numberElements = 1;
+    todos.splice(startIndex, numberElements, todoText.value);
+    
+    inputElement.value = '';
+    button.textContent = "+ Add new Task"; 
+    task = "new";
+    renderTodos()
+    saveToStorage();
+}
 
 function deleteTodo(pos) {
   todos.splice(pos,1);
