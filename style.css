@@ -1,0 +1,93 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background: rgb(61,3,124);
+  background: linear-gradient(90deg, rgba(61,3,124,1) 0%, rgba(137,76,242,1) 56%, rgba(0,212,255,1) 100%);
+  background-size: cover; 
+  background-blend-mode: overlay;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+  width: 350px;
+  height: 570px;
+  background-color: white;
+  box-shadow: 10px 10px 20px 1px rgba(61,3,124,1);
+  font-family: 'Abel', sans-serif;
+}
+
+.container h1 {
+  padding-top: 20px;
+  margin: 0px;
+  font-size: 40px;
+  color: rgba(137,76,242,1);
+  font-weight: bold;
+}
+
+.container h2 {
+  margin-top: 5px;
+  font-size: 12px;
+  height: 20px;
+  color: rgba(137,76,242,1);
+}
+
+.container ul {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  list-style-type: none;
+  padding: 0px;
+  width: 330px;
+  height: 340px;
+  font-size: 16px;
+}
+
+.container li {
+  display: block;
+  position: relative;
+  padding: 5px;
+  border: 1px solid rgb(233, 231, 231);
+  border-radius: 4px;
+  height: 40px;
+  outline: none;
+  margin: 3px;
+  color: grey;
+}
+
+.container li:hover {
+  background-color: rgb(21, 159, 223);
+  color: white;
+}
+
+.container i {
+  position: absolute;
+  right:10px;
+  top: 20%;
+}
+
+.container i:active {
+  color: yellow;
+  font-size: 18px;
+}
+
+.container input {
+  margin: 10px;
+  width: 330px;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+}
+
+.container button {
+  width: 330px;
+  height: 50px;
+  background-color: rgba(137,76,242,1);
+  color: white;
+  border-radius: 4px;
+}
