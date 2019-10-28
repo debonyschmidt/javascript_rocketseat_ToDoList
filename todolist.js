@@ -58,7 +58,8 @@ button.addEventListener("click", function() {
   if (task === "existent") {
     replaceTodo()
   } else if (todoText.value === "") {  
-    alert ("Please, enter a new task")
+    swal("Please, enter the task description!");
+
   } else {
     addTodo();
   }
@@ -96,9 +97,26 @@ function replaceTodo(){
 }
 
 function deleteTodo(pos) {
-  todos.splice(pos,1);
-  renderTodos();
-  saveToStorage();
+  swal({
+    title: "Are you sure?",
+    text: "Once deleted, you will not be able to recover this task!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      todos.splice(pos,1);
+      renderTodos();
+      saveToStorage();
+      swal("Your task has been deleted!", {
+        icon: "success",
+      });
+    } else {
+      swal("Your task is safe!");
+    }
+  });
+  
 }
 
 function saveToStorage() {

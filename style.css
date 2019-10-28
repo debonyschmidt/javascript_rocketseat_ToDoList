@@ -102,3 +102,10 @@ body{
 .container button:active {
   box-shadow: 2px 2px 1px rgba(61,3,124,1);
 }
+
+.swal-modal {
+  background-color: white;
+  border: 3px solid white;
+  width: 330px;
+  text-align: center;
+}
