@@ -19,7 +19,7 @@ body{
   height: 570px;
   background-color: white;
   box-shadow: 10px 10px 20px 1px rgba(61,3,124,1);
-  font-family: 'Abel', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .container h1 {
