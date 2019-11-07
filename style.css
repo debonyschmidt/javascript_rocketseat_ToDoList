@@ -5,7 +5,6 @@ html{
 
 body{
   background-color:rgb(223, 221, 221);
-  /* background: linear-gradient(90deg, rgba(61,3,124,1) 0%, rgba(137,76,242,1) 56%, rgba(0,212,255,1) 100%); */
   background-size: cover; 
   background-blend-mode: overlay;
 }
