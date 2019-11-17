@@ -1,4 +1,8 @@
 # javascript_rocketseat_ToDoList
+
+App demo
+https://debonyschmidt.github.io/javascript_rocketseat_ToDoList/
+
 To Do list is a simple web application to save Your daily tasks in order not to miss anything.
 
 Features
@@ -12,5 +16,4 @@ Technologies used:
 * JavaScript
 * Local Storage
 
-App demo
-https://debonyschmidt.github.io/javascript_rocketseat_ToDoList/
+
