@@ -14,3 +14,5 @@ Technologies used:
 
 App demo
 https://debonyschmidt.github.io/javascript_rocketseat_ToDoList/
+
+![Demo](demo.gif)
